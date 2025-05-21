@@ -1,5 +1,10 @@
+import FortuneTable from "./_components/FortuneTable";
 const page = () => {
-  return <div className="text-red-500">메인브랜치</div>;
+  return (
+    <div>
+      <FortuneTable />
+    </div>
+  );
 };
 
 export default page;
