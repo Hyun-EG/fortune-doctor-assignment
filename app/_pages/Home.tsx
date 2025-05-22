@@ -1,16 +1,21 @@
 "use client";
 
 import FortuneTable from "@/app/_components/fortune-table/FortuneTable";
-import { redirect } from "next/navigation";
-import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 const Home = () => {
-  const name = sessionStorage.getItem("name");
+  const router = useRouter();
+  const [name, setName] = useState("");
+
   useEffect(() => {
-    if (!name) {
+    const sessionName = sessionStorage.getItem("name");
+    if (!sessionName) {
       alert("이름을 기입하고 이동해주세요.");
-      redirect("/username");
+      router.replace("/username");
+    } else {
+      setName(sessionName);
     }
-  }, [name]);
+  }, [router]);
   return (
     <div className="relative min-w-[448px] min-h-[2340px] flex flex-col justify-end items-center bg-[url('/images/bg.webp')] bg-cover bg-no-repeat">
       <div className="absolute left-[18.5%] top-[33.9%]">
