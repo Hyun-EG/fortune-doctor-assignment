@@ -1,8 +1,16 @@
 "use client";
 
 import FortuneTable from "@/app/_components/fortune-table/FortuneTable";
+import { redirect } from "next/navigation";
+import { useEffect } from "react";
 const Home = () => {
   const name = sessionStorage.getItem("name");
+  useEffect(() => {
+    if (!name) {
+      alert("이름을 기입하고 이동해주세요.");
+      redirect("/username");
+    }
+  }, [name]);
   return (
     <div className="relative min-w-[448px] min-h-[2340px] flex flex-col justify-end items-center bg-[url('/images/bg.webp')] bg-cover bg-no-repeat">
       <div className="absolute left-[18.5%] top-[33.9%]">
