@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 const IntroScreen = () => {
   const router = useRouter();
   return (
-    <div className="relative w-[375px] min-h-[667px] flex justify-center items-end bg-[url('/images/intro-screen.webp')] bg-cover bg-center">
+    <div className="relative min-w-[448px] min-h-[667px] flex justify-center items-end bg-[url('/images/intro-screen.webp')] bg-cover bg-center">
       <div className="absolute left-8 top-8">
         <div
           className="flex flex-col gap-2"
@@ -41,16 +41,16 @@ const IntroScreen = () => {
             곧 찾아올지도 몰라요&quot;
           </p>
         </div>
-        <div
+        <button
           onClick={() => {
-            router.push("/home");
+            router.push("/username");
           }}
           className="w-32 h-10 flex justify-center items-center bg-white rounded-3xl"
         >
           <span className="inline-block text-xl font-bold animate-bounce [animation-duration:1.5s]">
             Touch!
           </span>
-        </div>
+        </button>
       </div>
     </div>
   );
