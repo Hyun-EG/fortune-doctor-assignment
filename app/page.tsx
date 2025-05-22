@@ -1,8 +1,8 @@
-import FortuneTable from "./_components/fortune-table/FortuneTable";
+import IntroScreen from "./_pages/IntroScreen";
 const page = () => {
   return (
     <div>
-      <FortuneTable />
+      <IntroScreen />
     </div>
   );
 };

@@ -26,6 +26,15 @@ module.exports = {
         "card-semi-sm": "0.6rem",
         "card-xl": "1.25rem",
       },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
+      animation: {
+        fadeIn: "fadeIn 2s ease-in-out",
+      },
     },
   },
   plugins: [],
