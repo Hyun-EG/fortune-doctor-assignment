@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 const IntroScreen = () => {
   const router = useRouter();
   return (
-    <div className="relative w-full h-screen flex justify-center items-end bg-[url('/images/intro-screen.webp')] bg-cover bg-center">
+    <div className="relative w-[375px] min-h-[667px] flex justify-center items-end bg-[url('/images/intro-screen.webp')] bg-cover bg-center">
       <div className="absolute left-8 top-8">
         <div
           className="flex flex-col gap-2"
