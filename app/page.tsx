@@ -1,4 +1,4 @@
-import FortuneTable from "./_components/FortuneTable";
+import FortuneTable from "./_components/fortune-table/FortuneTable";
 const page = () => {
   return (
     <div>
