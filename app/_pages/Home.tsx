@@ -3,6 +3,9 @@
 import FortuneTable from "@/app/_components/fortune-table/FortuneTable";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+
+export const dynamic = "force-dynamic";
+
 const Home = () => {
   const router = useRouter();
   const [name, setName] = useState("");
@@ -16,6 +19,9 @@ const Home = () => {
       setName(sessionName);
     }
   }, [router]);
+
+  if (!name) return null;
+
   return (
     <div className="relative min-w-[448px] min-h-[2340px] flex flex-col justify-end items-center bg-[url('/images/bg.webp')] bg-cover bg-no-repeat">
       <div className="absolute left-[18.5%] top-[33.9%]">
